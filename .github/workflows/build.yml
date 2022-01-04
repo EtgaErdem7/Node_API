@@ -16,5 +16,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file dockerfile-master --tag etga7/codeway:$(date +%s)
-           docker push etga7/codeway:$(date +%s)
 
