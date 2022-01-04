@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file dockerfile-master --tag etga7/codeway:$(date +%s)
+      run: docker build . --file dockerfile-master --tag etga7/codeway:$BUILD_NUMBER
     - name: Push the Docker image
-      run: docker push etga7/codeway:$(date +%s)
+      run: docker push etga7/codeway:$BUILD_NUMBER
 
